@@ -1,4 +1,7 @@
 # README
+![Build Status](https://codeship.com/projects/216430/status?branch=master)
+![Code Climate](https://codeclimate.com/github/ericsharma/looting-for-ears.png)
+![Coverage Status](https://coveralls.io/repos/ericsharma/looting-for-ears/badge.png)
 
 This README would normally document whatever steps are necessary to get the
 application up and running.
