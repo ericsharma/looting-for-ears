@@ -23,7 +23,9 @@ group :development, :test do
   gem 'shoulda-matchers', require: false
   gem 'valid_attribute'
 end
-
+group :test do
+  gem 'coveralls', require: false
+end
 group :production do
   gem 'rails_12factor'
 end
