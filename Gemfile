@@ -20,12 +20,12 @@ group :development, :test do
   gem 'launchy', require: false
   gem 'pry-rails'
   gem 'rspec-rails', '~> 3.5'
-  gem 'shoulda-matchers', require: false
-  gem 'valid_attribute'
-end
-group :test do
+  gem 'shoulda-matchers', '~>3.1', require: false
   gem 'coveralls', require: false
+  gem 'valid_attribute'
+  gem 'dotenv-rails'
 end
+
 group :production do
   gem 'rails_12factor'
 end
