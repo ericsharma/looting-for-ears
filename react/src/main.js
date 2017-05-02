@@ -1,10 +1,11 @@
 import 'babel-polyfill';
 import React from 'react';
 import ReactDOM from 'react-dom';
+import YoutubeShowContainer from  './containers/YoutubeShowContainer'
 
 $(function() {
   ReactDOM.render(
-    <h1>Boo yaa</h1>,
+    <YoutubeShowContainer/>,
     document.getElementById('app')
   );
 });
