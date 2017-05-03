@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
   devise_for :users
-  root 'playlists#index'
+  root 'homes#index'
   resources :playlists
+  resource :homes
 end
