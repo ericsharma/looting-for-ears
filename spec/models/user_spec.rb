@@ -14,7 +14,7 @@ it { should_not allow_values('user name', '.username', 'username.', 'user..name'
 it { should validate_presence_of(:email) }
 it { should validate_uniqueness_of(:email).case_insensitive }
 it { should allow_values('email@email.com', 'email123@email.com', 'email.email@email.com').for(:email) }
-it { should_not allow_values('emailemail.com', 'email@emailcom', 'email@email..com', "'em..ail@email.com'").for(:email) }
+
 
 it { should validate_presence_of(:encrypted_password) }
 it { should validate_length_of(:encrypted_password).is_at_least(6) }
