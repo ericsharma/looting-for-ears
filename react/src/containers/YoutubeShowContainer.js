@@ -7,14 +7,16 @@ class YoutubeShowContainer extends React.Component {
     super(props)
     this.state = {
       playlist: {},
-      title: ""
+      title: "",
+      position: []
     };
 
 
   }
 
-  componentDidMount() {
+  componentWillMount() {
     fetch(`https://www.googleapis.com/youtube/v3/playlistItems?part=snippet&maxResults=25&playlistId=PL7k6guMA0Xct4u4ZpmtcjNE27l7QdHBn-&key=AIzaSyDd_hMhi34WXD4mE5ok9hVeVKp5QcJLHSs&
+
       `)
     .then(response => {
       if(response.ok) {
@@ -29,7 +31,8 @@ class YoutubeShowContainer extends React.Component {
     .then(body => {
       this.setState({
         playlist: body.items[0].snippet.playlistId,
-        title: body.items[0].snippet.title
+        title: body.items[0].snippet.title,
+        position: body.items
 
       });
     })
@@ -39,6 +42,7 @@ class YoutubeShowContainer extends React.Component {
 
 
   render() {
+
     return(
       <div>
 
@@ -47,6 +51,7 @@ class YoutubeShowContainer extends React.Component {
       key={this.state.playlist}
       id={this.state.playlist}
       title={this.state.title}
+      position={this.state.position}
       />
       </div>
 
