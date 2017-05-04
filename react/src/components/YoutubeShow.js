@@ -4,19 +4,26 @@ import React from 'react';
 class YoutubeShow extends React.Component {
   constructor(props){
     super(props)
+    this.state = {
+
+    }
+    this.createSong = this.createSong.bind(this)
+
+
+  }
+  createSong(name, id){
+    let payload = {
+        name: name,
+        id: id
+
+    }
+      debugger;
 
   }
 
-
   render() {
 
-    // let ids = []
-    // let individual_songs = this.props.position.map (song => {
-    //   return(
-    //     ids = [...ids, ...song.snippet.resourceId.videoId]
-    //
-    //   )
-    // })
+
     let songs_with_ids = []
     this.props.position.map (song => {
       songs_with_ids.push({ id: song.snippet.resourceId.videoId, title: song.snippet.title })
@@ -25,6 +32,11 @@ class YoutubeShow extends React.Component {
     let iframes;
     if (songs_with_ids.length > 0) {
       iframes = songs_with_ids.map(song => {
+        let songHandler = () => {
+
+          this.createSong(song.title, song.id)
+          
+        }
         return(
           <div >
             <h8>{song.title}</h8> <br/>
@@ -36,8 +48,9 @@ class YoutubeShow extends React.Component {
               allowTransparency="true"
               frameBorder="0"
               allowFullScreen
+
               />
-            <button>Like Song</button>
+            <button onClick={songHandler}>Like Song</button>
 
           </div>
         )
