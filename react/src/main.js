@@ -1,11 +1,25 @@
 import 'babel-polyfill';
 import React from 'react';
 import ReactDOM from 'react-dom';
-import YoutubeShowContainer from  './containers/YoutubeShowContainer'
+import HomeContainer from './containers/HomeContainer'
+import YoutubeShowContainer from './containers/YoutubeShowContainer'
+
 
 $(function() {
-  ReactDOM.render(
-    <YoutubeShowContainer/>,
-    document.getElementById('app')
-  );
-});
+  if (document.getElementById('looting')) {
+    ReactDOM.render(
+      <YoutubeShowContainer/>,
+      document.getElementById('looting')
+        );
+      }
+    });
+
+
+$(function() {
+  if (document.getElementById('home')){
+    ReactDOM.render(
+      <HomeContainer/>,
+      document.getElementById('home')
+      );
+    }
+  });
