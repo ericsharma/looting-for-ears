@@ -2,7 +2,8 @@ import 'babel-polyfill';
 import React from 'react';
 import ReactDOM from 'react-dom';
 import HomeContainer from './containers/HomeContainer'
-import YoutubeShowContainer from './containers/YoutubeShowContainer'
+import PlaylistShowContainer from './containers/PlaylistShowContainer'
+import PlaylistIndexContainer from './containers/PlaylistIndexContainer'
 
 
 $(function() {
@@ -23,3 +24,12 @@ $(function() {
       );
     }
   });
+
+  $(function() {
+    if (document.getElementById('playlist')){
+      ReactDOM.render(
+        <PlaylistIndexContainer/>,
+        document.getElementById('playlist')
+        );
+      }
+    });

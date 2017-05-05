@@ -16,7 +16,6 @@ class YoutubeShowContainer extends React.Component {
 
   componentWillMount() {
     fetch(`https://www.googleapis.com/youtube/v3/playlistItems?part=snippet&maxResults=25&playlistId=PL7k6guMA0Xct4u4ZpmtcjNE27l7QdHBn-&key=AIzaSyDd_hMhi34WXD4mE5ok9hVeVKp5QcJLHSs&
-
       `)
     .then(response => {
       if(response.ok) {
