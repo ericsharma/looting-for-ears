@@ -13,7 +13,7 @@
     <%= csrf_meta_tags %>
   </head>
 
-  <body>
+  <body class="nav">
     <% flash.each do |type, message| %>
     <div class="<%= "flash #{type}" %>">
        <%= message %>
