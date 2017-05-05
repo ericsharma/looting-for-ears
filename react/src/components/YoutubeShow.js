@@ -40,8 +40,7 @@ class YoutubeShow extends React.Component {
     if (songs_with_ids.length > 0) {
       iframes = songs_with_ids.map(song => {
         let songHandler = () => {
-          debugger;
-
+        
           this.createSong(song.title, song.id)
 
         }
