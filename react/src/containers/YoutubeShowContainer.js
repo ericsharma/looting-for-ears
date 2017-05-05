@@ -10,42 +10,40 @@ class YoutubeShowContainer extends React.Component {
       title: "",
       position: []
     };
-
-
   }
 
-  componentWillMount() {
-    fetch(`https://www.googleapis.com/youtube/v3/playlistItems?part=snippet&maxResults=25&playlistId=PL7k6guMA0Xct4u4ZpmtcjNE27l7QdHBn-&key=AIzaSyDd_hMhi34WXD4mE5ok9hVeVKp5QcJLHSs&
-      `)
-    .then(response => {
-      if(response.ok) {
-        return response;
-      } else {
-        let erroMessage = `${response.status}, (${response.statusText})`,
-          error = new Error(errorMessage);
-        throw(error);
-       }
-    })
+  componentDidMount() {
+    let currentUrl = window.location.href;
+    let playlistDatabaseId = currentUrl[32];
+
+    let protoURI = "/api/v1/songs?";
+    protoURI += `id=${playlistDatabaseId}`;
+    let uri = encodeURI(protoURI);
+
+    fetch(uri)
     .then(response => response.json())
-    .then(body => {
-      this.setState({
-        playlist: body.items[0].snippet.playlistId,
-        title: body.items[0].snippet.title,
-        position: body.items
+    .then(playlistObject => {
+      let playlistId = playlistObject.playlist_id;
 
-      });
-    })
-    .catch(error => console.error(`Error in fetch: $(error.message)`))
+      let uri = "https://www.googleapis.com/youtube/v3/playlistItems?part=snippet&maxResults=25&playlistId="
+      uri += playlistId
+      uri += "&key=AIzaSyDd_hMhi34WXD4mE5ok9hVeVKp5QcJLHSs&"
+
+      fetch(uri)
+      .then(response => response.json())
+      .then(body => {
+        this.setState({
+          playlist: body.items[0].snippet.playlistId,
+          title: body.items[0].snippet.title,
+          position: body.items
+        });
+      })
+    });
   }
-
-
-
   render() {
 
     return(
       <div>
-
-
       <YoutubeShow
       key={this.state.playlist}
       id={this.state.playlist}

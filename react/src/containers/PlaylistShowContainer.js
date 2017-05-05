@@ -1,5 +1,5 @@
 import React from 'react';
-
+import YoutubeShowContainer from './YoutubeShowContainer'
 
 
 class PlaylistShowContainer extends React.Component {
@@ -21,6 +21,8 @@ class PlaylistShowContainer extends React.Component {
 
     return(
       <h1>
+        <YoutubeShowContainer
+          playlistId={this.props.playlistId}/>
 
        </h1>
     )

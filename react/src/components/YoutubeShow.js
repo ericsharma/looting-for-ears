@@ -33,14 +33,14 @@ class YoutubeShow extends React.Component {
 
     let songs_with_ids = []
     this.props.position.map (song => {
-      songs_with_ids.push({ id: song.snippet.resourceId.videoId, title: song.snippet.title, image: song.snippet.thumbnails.high.url })
+      songs_with_ids.push({ id: song.snippet.resourceId.videoId, title: song.snippet.title, image: song.snippet })
     });
 
     let iframes;
     if (songs_with_ids.length > 0) {
       iframes = songs_with_ids.map(song => {
         let songHandler = () => {
-        
+
           this.createSong(song.title, song.id)
 
         }
