@@ -1,11 +1,49 @@
+
 * {
-    background: url(bg.png) no-repeat center center fixed;
+  background: url(bg.png) no-repeat center center fixed;
+   -webkit-background-size: cover;
+   -moz-background-size: cover;
+   background-size: cover;
+
+   color: white;
+}
+  #looting {
+
+     * {background: url(bg.png) no-repeat center center fixed;
+      -webkit-background-size: cover;
+      -moz-background-size: cover;
+      background-size: cover;
+
+      color: white;}
+
+  }
+
+  #home {
+
+    * {
+      background: url(bg.png) no-repeat center center fixed;
+      -webkit-background-size: cover;
+      -moz-background-size: cover;
+      background-size: cover;
+
+    }
+  }
+
+  .sign {
+    * {
+      color: white;
+    }
+  }
+
+.nav {
+
+    * {
+      background: url(bg.png) no-repeat center center fixed;
     -webkit-background-size: cover;
     -moz-background-size: cover;
-
     background-size: cover;
-}
-
+  }
+  }
 #container {
   background-color: #fff;
   color: white;
@@ -19,8 +57,27 @@
   padding: 10px;
 }
 
+.edit {
 
 
+  * {
+    color: white;
+
+  }
+
+}
+.new {
+  * {
+    color: white;
+  }
+
+}
+.field {
+  color: white;
+}
+.action {
+  color: white;
+}
 .parallax {
     /* The image used */
     background-image: url(bg.png);

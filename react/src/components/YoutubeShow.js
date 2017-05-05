@@ -6,6 +6,7 @@ class YoutubeShow extends React.Component {
     super(props)
     this.state = {
 
+
     }
     this.createSong = this.createSong.bind(this)
 
@@ -14,11 +15,17 @@ class YoutubeShow extends React.Component {
   createSong(name, id){
     let payload = {
         name: name,
-        id: id
+        youtube_id: id
 
     }
-      debugger;
-
+    fetch('/api/v1/songs', {
+      credentials: 'same-origin',
+      method: 'POST',
+      body: JSON.stringify(payload) })
+    .then(response => {
+      let parsed = response.json()
+      return parsed
+    })
   }
 
   render() {
@@ -26,30 +33,24 @@ class YoutubeShow extends React.Component {
 
     let songs_with_ids = []
     this.props.position.map (song => {
-      songs_with_ids.push({ id: song.snippet.resourceId.videoId, title: song.snippet.title })
+      songs_with_ids.push({ id: song.snippet.resourceId.videoId, title: song.snippet.title, image: song.snippet.thumbnails.high.url })
     });
 
     let iframes;
     if (songs_with_ids.length > 0) {
       iframes = songs_with_ids.map(song => {
         let songHandler = () => {
+          debugger;
 
           this.createSong(song.title, song.id)
-          
+
         }
         return(
           <div >
             <h8>{song.title}</h8> <br/>
-            <iframe
-              id={song.id}
-              width="640"
-              height="360"
-              src={`https://www.youtube.com/embed/${song.id}`}
-              allowTransparency="true"
-              frameBorder="0"
-              allowFullScreen
 
-              />
+            <img src={song.image} ></img>
+
             <button onClick={songHandler}>Like Song</button>
 
           </div>
