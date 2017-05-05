@@ -19,6 +19,8 @@ class HomeContainer extends React.Component {
 
     return(
       <div>
+        <h1>Eric Sharma</h1>
+        <h3>Looting for Ears</h3>
 
        <Link to={`/playlists`}> Click To see the first playlist </Link>
 
