@@ -6,7 +6,7 @@ class Api::V1::SongsController < ApplicationController
     body = request.body.read
     parsed = JSON.parse(body)
     song = Song.new(parsed)
-    binding.pry
+  
     song.user_id = current_user.id
 
 
