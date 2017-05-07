@@ -18,6 +18,10 @@ it { should allow_values('email@email.com', 'email123@email.com', 'email.email@e
 
 it { should validate_presence_of(:encrypted_password) }
 it { should validate_length_of(:encrypted_password).is_at_least(6) }
+it { should have_many(:songs) }
+
+let(:user) { create(:user) }
+  it { expect(user.name).to eq("#{user.first_name} #{user.last_name}") }
 
 
 end
