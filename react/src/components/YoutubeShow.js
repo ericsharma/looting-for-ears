@@ -33,7 +33,7 @@ class YoutubeShow extends React.Component {
 
     let songs_with_ids = []
     this.props.position.map (song => {
-      songs_with_ids.push({ id: song.snippet.resourceId.videoId, title: song.snippet.title, image: song.snippet })
+      songs_with_ids.push({ id: song.snippet.resourceId.videoId, title: song.snippet.title, image: song.snippet.thumbnails.default.url })
     });
 
     let iframes;
@@ -63,7 +63,7 @@ class YoutubeShow extends React.Component {
     return(
       <div id="container">
       <div>
-      <h3>Looting For Chill </h3>
+
 
 
 

@@ -16,7 +16,7 @@ class YoutubeShowContainer extends React.Component {
     let currentUrl = window.location.href;
     let playlistDatabaseId = currentUrl[32];
 
-    let protoURI = "/api/v1/songs?";
+    let protoURI = "/api/v1/playlists?";
     protoURI += `id=${playlistDatabaseId}`;
     let uri = encodeURI(protoURI);
 

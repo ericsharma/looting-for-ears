@@ -3,10 +3,16 @@ Rails.application.routes.draw do
 
   namespace :api do
     namespace :v1 do
-      resources :songs, only: [:create, :index, :show]
+      resources :songs, only: [:create, :index]
+      resources :playlists, only: [:index]
+      resources :users, only: [:index]
+
     end
   end
+
   root 'homes#index'
   resources :playlists
-  resource :homes
+  resources :homes
+  resources :likes
+  resources :favorites
 end

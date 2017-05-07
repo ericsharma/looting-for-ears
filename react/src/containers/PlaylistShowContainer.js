@@ -11,7 +11,7 @@ class PlaylistShowContainer extends React.Component {
   }
 
   componentWillMount() {
-      fetch('/api/v1/songs/:id')
+      fetch('/api/v1/playlists/:id')
         .then(response => response.json())
         .then(body => {
           this.setState({ playlist: body })

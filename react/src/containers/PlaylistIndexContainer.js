@@ -11,7 +11,7 @@ class PlaylistIndexContainer extends React.Component {
   }
 
   componentWillMount() {
-      fetch('/api/v1/songs')
+      fetch('/api/v1/playlists')
         .then(response => response.json())
         .then(body => {
           this.setState({ playlists: body })

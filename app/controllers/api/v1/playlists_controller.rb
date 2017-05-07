@@ -1,7 +1,16 @@
-class Api::V1::SongsController < ApplicationController
+class Api::V1::PlaylistsController < ApplicationController
+  respond_to :json
   skip_before_filter :verify_authenticity_token
 
-  def index; end
+  def index
+    if params[:id]
+      playlist = Playlist.find(params[:id])
+      respond_with playlist
+    else
+      playlists = Playlist.all
+      render json: playlists
+    end
+  end
 
   def create
     playlistId = params["playlistId"]
