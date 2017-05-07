@@ -6,15 +6,19 @@ class ProfileShowContainer extends React.Component {
   constructor(props){
     super(props)
     this.state = {
-      songs: {}
+      songs: []
     }
   }
 
-  componentWillMount() {
-    fetch('/api/v1/users')
+  componentDidMount() {
+    fetch('/api/v1/users', {
+      credentials: 'same-origin',
+      method: 'GET'
+    })
       .then(response => response.json())
       .then(body => {
-        this.setState({ songs: body })
+        console.log(body)
+        this.setState({ songs: body.songs })
       })
 
     }
@@ -24,8 +28,9 @@ class ProfileShowContainer extends React.Component {
     return(
       <div>
       <ProfileShow
-      body={this.state.songs}
-      />
+        
+        songs={this.state.songs}
+        />
 
       </div>
 
