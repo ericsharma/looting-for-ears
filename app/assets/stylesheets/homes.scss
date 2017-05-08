@@ -1,8 +1,8 @@
 
 body {
-  background-image: url(bg.png);
-   -webkit-background-size: cover;
-   -moz-background-size: cover;
+  background-image: image-url('bg.png');
+  //  -webkit-background-size: cover;
+  //  -moz-background-size: cover;
    background-size: cover;
 
    color: white;
