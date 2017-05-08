@@ -1,49 +1,49 @@
 
-* {
-  background: url(bg.png) no-repeat center center fixed;
+body {
+  background-image: url(bg.png);
    -webkit-background-size: cover;
    -moz-background-size: cover;
    background-size: cover;
 
    color: white;
 }
-  #looting {
-
-     * {background: url(bg.png) no-repeat center center fixed;
-      -webkit-background-size: cover;
-      -moz-background-size: cover;
-      background-size: cover;
-
-      color: white;}
-
-  }
-
-  #home {
-
-    * {
-      background: url(bg.png) no-repeat center center fixed;
-      -webkit-background-size: cover;
-      -moz-background-size: cover;
-      background-size: cover;
-
-    }
-  }
-
-  .sign {
-    * {
-      color: white;
-    }
-  }
-
-.nav {
-
-    * {
-      background: url(bg.png) no-repeat center center fixed;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    background-size: cover;
-  }
-  }
+//   #looting {
+//
+//      * {background: url(bg.png) no-repeat center center fixed;
+//       -webkit-background-size: cover;
+//       -moz-background-size: cover;
+//       background-size: cover;
+//
+//       color: white;}
+//
+//   }
+//
+//   #home {
+//
+//     * {
+//       background: url(bg.png) no-repeat center center fixed;
+//       -webkit-background-size: cover;
+//       -moz-background-size: cover;
+//       background-size: cover;
+//
+//     }
+//   }
+//
+//   .sign {
+//     * {
+//       color: white;
+//     }
+//   }
+//
+// .nav {
+//
+//     * {
+//       background-image: url(bg.png);
+//     -webkit-background-size: cover;
+//     -moz-background-size: cover;
+//     background-size: cover;
+//   }
+//   }
 #container {
   background-color: #fff;
   color: white;
@@ -57,21 +57,7 @@
   padding: 10px;
 }
 
-.edit {
 
-
-  * {
-    color: white;
-
-  }
-
-}
-.new {
-  * {
-    color: white;
-  }
-
-}
 .field {
   color: white;
 }
@@ -90,6 +76,10 @@
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+}
+
+.top-bar {
+  opacity: 0;
 }
 
 
