@@ -4,25 +4,51 @@ class HomeContainer extends React.Component {
   constructor(props){
     super(props)
     this.state = {
-      playlist: {},
-      title: "",
-      position: []
-    };
+      name: "",
+      playlistId: ""
+    }
 
 
   }
 
+  onNameChange(event) {
+    this.setState({ name: event.target.value })
+  }
+  onPlaylistChange(event) {
+    this.setState({ playlistId: event.target.value })
+  }
+
+  onSubmit(event) {
+    event.preventDefault();
+  }
 
 
 
   render() {
 
     return(
-      <div>
-        <h1>Eric Sharma</h1>
-        <h3>Looting for Ears</h3>
+      <div class="form">
+        <h1>"Submit a new Playlist"</h1>
 
-       <Link to={`/playlists`}> Click To see the first playlist </Link>
+          <form onSubmit={this.onSubmit}>
+           <label>Playlist Name
+             <input
+               type="text"
+               id="address"
+               value={this.state.address}
+               onChange={this.onNameChange}/>
+           </label>
+           <label>Playlist Url
+             <input
+               type="text"
+               id="city"
+               value={this.state.city}
+               onChange={this.onPlaylistChange}/>
+           </label>
+         </form>
+
+
+
 
       </div>
 
