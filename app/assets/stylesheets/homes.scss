@@ -1,11 +1,25 @@
 
+// * {
+//   background-image: image-url('bg.png') no-repeat center center fixed;
+//      -webkit-background-size: cover;
+//      -moz-background-size: cover;
+//      background-size: cover;
+//
+//      color: white;
+// }
+
+// The below is what jenah did and it works for the home page but I'm having trouble replicating
 body {
   background-image: image-url('bg.png');
-  //  -webkit-background-size: cover;
-  //  -moz-background-size: cover;
+   -webkit-background-size: cover;
+   -moz-background-size: cover;
    background-size: cover;
 
    color: white;
+
+}
+label {
+  color: white;
 }
 //   #looting {
 //
@@ -44,8 +58,11 @@ body {
 //     background-size: cover;
 //   }
 //   }
+
+
 #container {
-  background-color: #fff;
+
+
   color: white;
 
   opacity: 0.7;
@@ -55,9 +72,23 @@ body {
   width: 50%;
   border: 3px;
   padding: 10px;
+
+
 }
 
+.looting {
+  // background-image: image-url('bg.png') no-repeat center center fixed;
+  //  -webkit-background-size: cover;
+  //  -moz-background-size: cover;
+  //  background-size: cover;
+}
 
+#looting{
+  // background-image: image-url('bg.png');
+  //  -webkit-background-size: cover;
+  //  -moz-background-size: cover;
+  //  background-size: cover;
+}
 .field {
   color: white;
 }
@@ -77,6 +108,7 @@ body {
     background-repeat: no-repeat;
     background-size: cover;
 }
+
 
 
 
