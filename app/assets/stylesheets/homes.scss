@@ -9,13 +9,25 @@
 // }
 
 // The below is what jenah did and it works for the home page but I'm having trouble replicating
-body {
-  background-image: image-url('bg.png');
-   -webkit-background-size: cover;
-   -moz-background-size: cover;
-   background-size: cover;
+#home {
 
-   color: white;
+
+}
+
+
+
+body {
+
+       background-image: image-url('bg.png');
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        background-size: cover;
+        background-size: 100%;
+        background-repeat: no-repeat;
+        background-attachment:fixed;
+
+        color: white;
+        background-position: center-top;
 
 }
 label {
@@ -32,16 +44,6 @@ label {
 //
 //   }
 //
-//   #home {
-//
-//     * {
-//       background: url(bg.png) no-repeat center center fixed;
-//       -webkit-background-size: cover;
-//       -moz-background-size: cover;
-//       background-size: cover;
-//
-//     }
-//   }
 //
 //   .sign {
 //     * {
@@ -76,19 +78,11 @@ label {
 
 }
 
-.looting {
-  // background-image: image-url('bg.png') no-repeat center center fixed;
-  //  -webkit-background-size: cover;
-  //  -moz-background-size: cover;
-  //  background-size: cover;
-}
 
-#looting{
-  // background-image: image-url('bg.png');
-  //  -webkit-background-size: cover;
-  //  -moz-background-size: cover;
-  //  background-size: cover;
-}
+
+
+
+
 .field {
   color: white;
 }
@@ -97,7 +91,7 @@ label {
 }
 .parallax {
     /* The image used */
-    background-image: url(bg.png);
+    background-image: url(gun-2.tiff);
 
     /* Set a specific height */
     height: 500px;
@@ -108,6 +102,8 @@ label {
     background-repeat: no-repeat;
     background-size: cover;
 }
+
+
 
 
 

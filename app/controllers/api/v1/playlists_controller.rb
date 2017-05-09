@@ -13,19 +13,19 @@ class Api::V1::PlaylistsController < ApplicationController
   end
 
   def create
-    playlistId = params["playlistId"]
-
     body = request.body.read
     parsed = JSON.parse(body)
-    song = Song.new(parsed)
+    playlist = Playlist.new(parsed)
 
-    song.user_id = current_user.id
+    playlist.user_id = current_user.id
 
 
-    if song.save
-      flash[:success] = "View profile to see your newly saved song!"
+    if playlist.save
+      binding.pry
+
+      flash[:success] = "Platlist added succsessfully"
     else
-       flash[:errors] = song.errors.full_messages.join(',')
+       flash[:errors] = playlist.errors.full_messages.join(',')
 
     end
 
