@@ -2,6 +2,7 @@ import React from 'react';
 import PlaylistShow from '../components/PlaylistShow'
 
 
+
 class PlaylistIndexContainer extends React.Component {
   constructor(props){
     super(props)
@@ -14,8 +15,10 @@ class PlaylistIndexContainer extends React.Component {
       fetch('/api/v1/playlists')
         .then(response => response.json())
         .then(body => {
+
           this.setState({ playlists: body })
         })
+        
     }
   render() {
     let all_playlists = this.state.playlists.map (playlist => {
@@ -26,6 +29,7 @@ class PlaylistIndexContainer extends React.Component {
           name={playlist.name}
           playlistId={playlist.playlist_id}
         />
+
       )
     });
     return(

@@ -6,6 +6,7 @@ class ProfileShow extends React.Component {
     super(props)
     this.state = {}
   }
+  s
 
 
   render() {
@@ -25,14 +26,17 @@ class ProfileShow extends React.Component {
         src={`https://www.youtube.com/embed/${song.youtubeId}`}
         allowTransparency="true" frameBorder="0" allowFullScreen></iframe>
 
+      <button>Add Song Playlist</button>
           </div>
         )
       })
     }
+
     return(
       <div id="container">
 
-        {iframes}
+          {iframes}
+
       </div>
 
 

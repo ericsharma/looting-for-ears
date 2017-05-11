@@ -10,6 +10,7 @@ class PlaylistShow extends React.Component {
 
   render() {
     return(
+    
       <div id='PlaylistIndexBox'>
         <div className='PlaylistIndexEntry'>
           <a href={`playlists/${this.props.id}`}>{this.props.name}</a>

@@ -21,7 +21,7 @@ class Api::V1::PlaylistsController < ApplicationController
 
 
     if playlist.save
-      binding.pry
+
 
       flash[:success] = "Platlist added succsessfully"
     else

@@ -18,7 +18,8 @@
 
 body {
 
-       background-image: image-url('bg.png');
+  
+         background-image: image-url('bg.png');
         -webkit-background-size: cover;
         -moz-background-size: cover;
         background-size: cover;
@@ -89,19 +90,19 @@ label {
 .action {
   color: white;
 }
-.parallax {
-    /* The image used */
-    background-image: url(gun-2.tiff);
-
-    /* Set a specific height */
-    height: 500px;
-
-    /* Create the parallax scrolling effect */
-    background-attachment: fixed;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-}
+// .parallax {
+//     /* The image used */
+//     background-image: url(gun-2.tiff);
+//
+//     /* Set a specific height */
+//     height: 500px;
+//
+//     /* Create the parallax scrolling effect */
+//     background-attachment: fixed;
+//     background-position: center;
+//     background-repeat: no-repeat;
+//     background-size: cover;
+// }
 
 
 
