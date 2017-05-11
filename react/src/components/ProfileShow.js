@@ -5,7 +5,8 @@ class ProfileShow extends React.Component {
   constructor(props){
     super(props)
     this.state = {
-      playlist: []
+      playlist: [],
+      selected: "addSongBefore"
     }
     this.createIndividual = this.createIndividual.bind(this)
     this.submitIndividual = this.submitIndividual.bind(this)
@@ -17,7 +18,10 @@ class ProfileShow extends React.Component {
 
   }
 
+
+
   submitIndividual() {
+    
     let payload = {
       first_song: this.state.playlist.shift(),
       list: this.state.playlist.toString()
@@ -38,6 +42,7 @@ class ProfileShow extends React.Component {
 
   render() {
 
+
     let handleSubmit = () => {
       this.submitIndividual()
     }
@@ -50,6 +55,7 @@ class ProfileShow extends React.Component {
     let iframes;
     if (favoriteSongs.length > 0) {
       iframes = favoriteSongs.map (song => {
+
         let individualHandler = () => {
           this.createIndividual(song.youtubeId)
         }
@@ -63,16 +69,20 @@ class ProfileShow extends React.Component {
         allowTransparency="true" frameBorder="0" allowFullScreen></iframe>
 
       <button onClick={individualHandler}>Add Song Playlist</button>
+
           </div>
         )
       })
     }
-    let currentUrl = window.location.href;
-    currentUrl += "/individuals"
+
+    let currentState = this.state.playlist
+
     return(
       <div id="container">
+
+
           <button onClick={handleSubmit}>Click to save playlist</button> <br/>
-          <a href={`${currentUrl}`}>View Personal Playlists</a>
+
 
           {iframes}
 

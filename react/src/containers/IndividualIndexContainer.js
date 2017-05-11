@@ -1,5 +1,5 @@
 import React from 'react';
-import IndividualShow from '../components/IndividualShow'
+
 
 class IndividualIndexContainer extends React.Component {
   constructor(props){
@@ -29,13 +29,7 @@ class IndividualIndexContainer extends React.Component {
         return (
           <div>
         <a href={`individuals/${individual.id}`}>{individual.name}</a>
-        <IndividualShow
-          key={individual.id}
-          id={individual.id}
-          name={individual.name}
-          firstSong={individual.first_song}
-          list={individual.list}
-          />
+      
 
           </div>
         )

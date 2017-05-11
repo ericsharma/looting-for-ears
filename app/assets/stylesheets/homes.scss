@@ -18,7 +18,7 @@
 
 body {
 
-  
+
          background-image: image-url('bg.png');
         -webkit-background-size: cover;
         -moz-background-size: cover;
@@ -79,7 +79,15 @@ label {
 
 }
 
+.addSongBefore{
+  border: 1px solid green;
 
+
+}
+.addSongAfter{
+  border: 1px solid red;
+
+}
 
 
 
