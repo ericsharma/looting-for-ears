@@ -5,6 +5,7 @@ import HomeContainer from './containers/HomeContainer'
 import YoutubeShowContainer from './containers/YoutubeShowContainer'
 import PlaylistIndexContainer from './containers/PlaylistIndexContainer'
 import ProfileShowContainer from './containers/ProfileShowContainer'
+import IndividualIndexContainer from './containers/IndividualIndexContainer'
 
 
 $(function() {
@@ -39,6 +40,14 @@ $(function() {
     ReactDOM.render(
       <ProfileShowContainer/>,
       document.getElementById('profile')
+      );
+    }
+  });
+$(function() {
+  if (document.getElementById('individuals')){
+    ReactDOM.render(
+      <IndividualIndexContainer/>,
+      document.getElementById('individuals')
       );
     }
   });
