@@ -5,23 +5,58 @@ class ProfileShow extends React.Component {
   constructor(props){
     super(props)
     this.state = {
+      names: [],
       playlist: [],
       selected: "addSongBefore"
     }
     this.createIndividual = this.createIndividual.bind(this)
     this.submitIndividual = this.submitIndividual.bind(this)
+    this.removeIndividual = this.removeIndividual.bind(this)
   }
 
-  createIndividual(id){
-    this.state.playlist.push(id)
+  createIndividual(id, name){
+    let currentPlaylist = this.state.playlist
+    let currentName = this.state.names
+    let newPlaylist = currentPlaylist.concat(id)
+    let newName = currentName.concat(name)
 
+
+    this.setState({
+      playlist: newPlaylist,
+      names: newName
+    })
 
   }
 
+  removeIndividual(id, name){
+    let currentPlaylist = this.state.playlist
+    let newPlaylist = currentPlaylist.filter((item) => {
+
+      return item !== id
+
+    })
+
+    this.setState({ playlist: newPlaylist })
+
+    let currentName = this.state.names
+    let newName = currentName.filter((item) => {
+
+
+      return item !== name
+
+    })
+
+    this.setState({ names: newName})
+
+
+
+
+
+  }
 
 
   submitIndividual() {
-    
+
     let payload = {
       first_song: this.state.playlist.shift(),
       list: this.state.playlist.toString()
@@ -41,7 +76,23 @@ class ProfileShow extends React.Component {
   }
 
   render() {
+    let currentStateofPlaylist;
+    if (this.state.names.length > 0) {
+      currentStateofPlaylist = this.state.names.map (name => {
+        if (this.state.names.length === 1)
+        {
+          return (
+          <ul> <li>{name}</li> </ul>
+        )
+        } else {
+          return (
+            <ul> <li>{name},</li></ul>
+          )
 
+      }
+      })
+
+    }
 
     let handleSubmit = () => {
       this.submitIndividual()
@@ -51,13 +102,15 @@ class ProfileShow extends React.Component {
 
       favoriteSongs.push({ name: song.name, youtubeId: song.youtube_id })
     });
-    console.log(favoriteSongs)
+
     let iframes;
     if (favoriteSongs.length > 0) {
       iframes = favoriteSongs.map (song => {
-
+        let individualRemover = () => {
+          this.removeIndividual(song.youtubeId, song.name)
+        }
         let individualHandler = () => {
-          this.createIndividual(song.youtubeId)
+          this.createIndividual(song.youtubeId, song.name)
         }
 
 
@@ -68,7 +121,8 @@ class ProfileShow extends React.Component {
         src={`https://www.youtube.com/embed/${song.youtubeId}`}
         allowTransparency="true" frameBorder="0" allowFullScreen></iframe>
 
-      <button onClick={individualHandler}>Add Song Playlist</button>
+      <button className="addSongButton" onClick={individualHandler}>Add Song to Playlist</button>
+      <button className="addSongButton" onClick={individualRemover}>Delete Song from Playlist</button>
 
           </div>
         )
@@ -78,13 +132,26 @@ class ProfileShow extends React.Component {
     let currentState = this.state.playlist
 
     return(
-      <div id="container">
-
-
+      <div>
+        <div className= "left side">
           <button onClick={handleSubmit}>Click to save playlist</button> <br/>
+          <h4>Current Songs in Playlist</h4>
+
+          {currentStateofPlaylist}
+        </div>
+
+        <div id="container">
 
 
-          {iframes}
+
+
+
+
+
+
+            {iframes}
+
+        </div>
 
       </div>
 

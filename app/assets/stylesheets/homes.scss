@@ -27,6 +27,7 @@ body {
         background-repeat: no-repeat;
         background-attachment:fixed;
 
+
         color: white;
         background-position: center-top;
 
@@ -34,33 +35,6 @@ body {
 label {
   color: white;
 }
-//   #looting {
-//
-//      * {background: url(bg.png) no-repeat center center fixed;
-//       -webkit-background-size: cover;
-//       -moz-background-size: cover;
-//       background-size: cover;
-//
-//       color: white;}
-//
-//   }
-//
-//
-//   .sign {
-//     * {
-//       color: white;
-//     }
-//   }
-//
-// .nav {
-//
-//     * {
-//       background-image: url(bg.png);
-//     -webkit-background-size: cover;
-//     -moz-background-size: cover;
-//     background-size: cover;
-//   }
-//   }
 
 
 #container {
@@ -89,7 +63,10 @@ label {
 
 }
 
+.addSongButton:hover{
+  background: green
 
+}
 
 
 .field {

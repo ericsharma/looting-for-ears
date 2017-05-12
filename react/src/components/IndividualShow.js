@@ -10,6 +10,8 @@ class IndividualShow extends React.Component {
 
     }
   }
+
+
   componentDidMount() {
     let currentUrl = window.location.href;
 
@@ -44,8 +46,8 @@ class IndividualShow extends React.Component {
   render() {
     return(
 
-      <div id='PlaylistIndexBox'>
-                {this.state.name}
+      <div id='container'>
+                {this.state.name} <br/>
       <iframe id="player" width="640" height="360"
         src={`https://www.youtube.com/embed/${this.state.firstSong}?playlist=${this.state.list}`}
         allowTransparency="true" frameBorder="0" allowFullScreen></iframe>

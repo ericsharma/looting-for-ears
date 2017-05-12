@@ -1,0 +1,10 @@
+<h1>Edit Playlist</h1>
+<%= form_for [@meme, @review] do |f| %>
+  <div class="field">
+  <%= f.label :name %>
+  <%= f.text_field :name %>
+  </div>
+  <div class="actions">
+    <%= f.submit "Update Name", class: "button"%>
+  </div>
+<% end %>
