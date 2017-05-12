@@ -55,7 +55,8 @@ class HomeContainer extends React.Component {
     }
 
     return(
-      <div class="form">
+      <div className="form">
+
         <h1>Submit a new Playlist</h1>
 
           <form onSubmit={playlistHandler}>
@@ -75,6 +76,7 @@ class HomeContainer extends React.Component {
            </label>
            <input type="submit" className="button" value="Submit" />
          </form>
+
 
 
 

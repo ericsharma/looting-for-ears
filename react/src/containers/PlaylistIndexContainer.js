@@ -18,7 +18,7 @@ class PlaylistIndexContainer extends React.Component {
 
           this.setState({ playlists: body })
         })
-        
+
     }
   render() {
     let all_playlists = this.state.playlists.map (playlist => {
@@ -33,7 +33,13 @@ class PlaylistIndexContainer extends React.Component {
       )
     });
     return(
-      <h1>{all_playlists}</h1>
+      <div>
+        <div className="playlistIndex">
+      <h1>Curated Playlists</h1>
+        </div>
+      <h3>{all_playlists}</h3>
+      </div>
+
     )
   }
 

@@ -50,7 +50,7 @@ class YoutubeShow extends React.Component {
 
             <img src={song.image} ></img>
 
-            <button onClick={songHandler}>Like Song</button>
+            <button className="likeSong"onClick={songHandler}>Like Song</button>
 
           </div>
         )

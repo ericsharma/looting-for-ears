@@ -11,12 +11,12 @@ Rails.application.routes.draw do
     end
   end
 
-  root 'homes#index'
+  root 'playlists#index'
   resources :playlists, only: [:index, :show]
   resources :homes, only: [:index]
 
   resources :favorites, only: [:index]
-  resources :individuals, only: [:index, :show]
+  resources :individuals, only: [:index, :show, :edit, :update, :destroy]
 
 
 end

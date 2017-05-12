@@ -79,17 +79,12 @@ class ProfileShow extends React.Component {
     let currentStateofPlaylist;
     if (this.state.names.length > 0) {
       currentStateofPlaylist = this.state.names.map (name => {
-        if (this.state.names.length === 1)
-        {
+
+
           return (
           <ul> <li>{name}</li> </ul>
         )
-        } else {
-          return (
-            <ul> <li>{name},</li></ul>
-          )
 
-      }
       })
 
     }
@@ -121,10 +116,17 @@ class ProfileShow extends React.Component {
         src={`https://www.youtube.com/embed/${song.youtubeId}`}
         allowTransparency="true" frameBorder="0" allowFullScreen></iframe>
 
-      <button className="addSongButton" onClick={individualHandler}>Add Song to Playlist</button>
-      <button className="addSongButton" onClick={individualRemover}>Delete Song from Playlist</button>
 
-          </div>
+
+
+
+      <button className="removeSongButton" onClick={individualRemover}>Delete Song from Playlist</button>
+      <button className="addSongButton" onClick={individualHandler}>Add Song to Playlist</button>
+
+      </div>
+
+
+
         )
       })
     }
@@ -133,20 +135,14 @@ class ProfileShow extends React.Component {
 
     return(
       <div>
-        <div className= "left side">
-          <button onClick={handleSubmit}>Click to save playlist</button> <br/>
+        <div className= "leftSide">
+          <a onClick={handleSubmit} href={"individuals"}> Click to save playlist</a> <br/>
           <h4>Current Songs in Playlist</h4>
 
           {currentStateofPlaylist}
         </div>
 
         <div id="container">
-
-
-
-
-
-
 
 
             {iframes}

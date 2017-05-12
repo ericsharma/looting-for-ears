@@ -6,7 +6,8 @@ class IndividualShow extends React.Component {
     this.state = {
       firstSong: "",
       list: "",
-      name: ""
+      name: "",
+      edit: window.location.href + "/edit"
 
     }
   }
@@ -44,13 +45,19 @@ class IndividualShow extends React.Component {
   }
 
   render() {
-    return(
 
-      <div id='container'>
-                {this.state.name} <br/>
-      <iframe id="player" width="640" height="360"
-        src={`https://www.youtube.com/embed/${this.state.firstSong}?playlist=${this.state.list}`}
-        allowTransparency="true" frameBorder="0" allowFullScreen></iframe>
+    return(
+      <div>
+        <div id="containerNoVid">
+          <a href= {this.state.edit}>Click to Edit Playlist Name</a> <br/>
+                  {this.state.name} <br/>
+        </div>
+        <div id='container'>
+
+          <iframe id="player" width="640" height="360"
+            src={`https://www.youtube.com/embed/${this.state.firstSong}?playlist=${this.state.list}`}
+            allowTransparency="true" frameBorder="0" allowFullScreen></iframe>
+        </div>
       </div>
     )
   }

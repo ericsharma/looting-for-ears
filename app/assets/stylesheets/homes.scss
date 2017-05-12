@@ -14,9 +14,21 @@
 
 }
 
+.individuals {
+  background-image: image-url('cat.png');
+ -webkit-background-size: cover;
+ -moz-background-size: cover;
+ background-size: cover;
+ background-size: 100%;
+ background-repeat: no-repeat;
+ background-attachment:fixed;
 
 
-body {
+ color: white;
+ background-position: center-top;
+}
+
+.favorites {
 
 
          background-image: image-url('bg.png');
@@ -30,6 +42,41 @@ body {
 
         color: white;
         background-position: center-top;
+
+
+
+
+}
+.homes {
+  background-image: image-url('watergun.png');
+ -webkit-background-size: cover;
+ -moz-background-size: cover;
+ background-size: cover;
+ background-size: 100%;
+ background-repeat: no-repeat;
+ background-attachment:fixed;
+
+
+ color: white;
+ background-position: center-top;
+}
+
+.playlists {
+  background-image: image-url('kanti.png');
+ -webkit-background-size: cover;
+ -moz-background-size: cover;
+ background-size: cover;
+ background-size: 100%;
+ background-repeat: no-repeat;
+ background-attachment:fixed;
+
+
+ color: white;
+ background-position: center-top;
+
+ a {
+   color: white;
+ }
 
 }
 label {
@@ -53,21 +100,64 @@ label {
 
 }
 
-.addSongBefore{
-  border: 1px solid green;
 
 
+
+
+#containerNoVid {
+  margin: auto;
+  width: 50%;
+  border: 3px;
+  padding: 10px;
+  color: white;
 }
-.addSongAfter{
-  border: 1px solid red;
 
+.playlistIndex {
+  text-align: center;
+  vertical-align: middle;
+  line-height: 90px;
 }
 
 .addSongButton:hover{
-  background: green
+
+
+  position: auto;
+    left: 100px;
+    border: 3px solid #8AC007;
+
+
+}
+.addSongButton {
+  color: #D4EE5E;
+
 
 }
 
+.removeSongButton {
+margin-right: 300px;
+color: #FF4242;
+
+}
+.removeSongButton:hover{
+
+  position: auto;
+    left: 100px;
+    border: 3px solid red;
+
+
+}
+
+.likeSong{
+  color: white;
+}
+
+.form {
+  margin: auto;
+  width: 50%;
+  border: 3px;
+  padding: 10px;
+  width: 50%
+}
 
 .field {
   color: white;
@@ -91,9 +181,21 @@ label {
 
 
 
+.leftSide {
+
+
+position: fixed;
+top: 15%;
+left: 3%;
 
 
 
+}
+
+.flex {
+  display: flex
+
+}
 
 button {
   color: white;

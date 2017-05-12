@@ -13,7 +13,7 @@
     <%= csrf_meta_tags %>
   </head>
 
-  <body class="nav">
+  <body class="<%= controller_name %>">
     <% flash.each do |type, message| %>
     <div class="<%= "flash #{type}" %>">
        <%= message %>
@@ -25,13 +25,14 @@
         <li class="menu-text"><%= link_to "Home", root_path %></li>
         <li><%= link_to "Playlists", playlists_path %></li>
         <li><%= link_to "My Playlists", individuals_path %></li>
+        <li>    <%= link_to "Submit Playlist", homes_path %>     </li>
       </ul>
     </div>
     <div class="top-bar-right">
       <ul class="menu">
         <% if signed_in? %>
           <li><%= current_user.email %></li>
-          <li>  <%= link_to "View Profile", favorites_path %>    </li>
+          <li>  <%= link_to "Favorite Songs", favorites_path %>    </li>
           <li>  <%= link_to "Edit Profile", edit_user_registration_path %>  </li>
           <li><%= link_to "Sign out", destroy_user_session_path, data: { method: 'delete' } %></li>
         <% else %>
