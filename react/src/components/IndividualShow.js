@@ -48,10 +48,12 @@ class IndividualShow extends React.Component {
 
     return(
       <div>
-        <div id="containerNoVid">
-          <a href= {this.state.edit}>Click to Edit Playlist Name</a> <br/>
-                  {this.state.name} <br/>
+        <center>
+        <div>
+          <a className= "anchorCenter" href= {this.state.edit}>Click to Edit Playlist Name</a> <br/>
+          <h3 className = "favoriteCenter">{this.state.name}</h3> <br/>
         </div>
+        </center>
         <div id='container'>
 
           <iframe id="player" width="640" height="360"

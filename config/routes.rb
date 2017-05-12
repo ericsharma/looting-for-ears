@@ -13,7 +13,7 @@ Rails.application.routes.draw do
 
   root 'playlists#index'
   resources :playlists, only: [:index, :show]
-  resources :homes, only: [:index]
+  resources :homes, only: [:index, :show]
 
   resources :favorites, only: [:index]
   resources :individuals, only: [:index, :show, :edit, :update, :destroy]

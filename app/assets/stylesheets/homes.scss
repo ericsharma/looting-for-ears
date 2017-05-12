@@ -9,10 +9,7 @@
 // }
 
 // The below is what jenah did and it works for the home page but I'm having trouble replicating
-#home {
 
-
-}
 
 .individuals {
   background-image: image-url('cat.png');
@@ -61,6 +58,8 @@
  background-position: center-top;
 }
 
+
+
 .playlists {
   background-image: image-url('kanti.png');
  -webkit-background-size: cover;
@@ -102,7 +101,9 @@ label {
 
 
 
-
+.anchorCenter {
+  text-align: center;
+}
 
 #containerNoVid {
   margin: auto;
@@ -115,6 +116,11 @@ label {
 .playlistIndex {
   text-align: center;
   vertical-align: middle;
+  line-height: 90px;
+}
+
+.favoriteCenter {
+  text-align: center;
   line-height: 90px;
 }
 
