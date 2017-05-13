@@ -21,7 +21,7 @@ class IndividualsController < ApplicationController
   def destroy
     @individual = Individual.find(params[:id])
     @individual.destroy
-    render :index
+    redirect_to individuals_path
   end
 
   private

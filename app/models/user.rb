@@ -5,6 +5,7 @@ class User < ApplicationRecord
 
   has_many :songs
   has_many :individuals
+  has_many :homes
 
   validates :first_name, presence: true
   validates :last_name, presence: true
