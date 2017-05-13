@@ -27,9 +27,10 @@ class IndividualIndexContainer extends React.Component {
 
       let all_individuals = this.state.playlists.map (individual => {
         return (
-          <div>
-        <a href={`individuals/${individual.id}`}>{individual.name}</a>
-      
+          <div className="individualContainer">
+            <center>
+              <h3><a href={`individuals/${individual.id}`}>{individual.name}</a></h3>
+            </center>
 
           </div>
         )

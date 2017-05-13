@@ -110,8 +110,8 @@ class ProfileShow extends React.Component {
 
 
         return(
-          <div>
-            <h8>{song.name}</h8>
+          <div className="favoritesContainer">
+            
              <iframe id="player" width="640" height="360"
         src={`https://www.youtube.com/embed/${song.youtubeId}`}
         allowTransparency="true" frameBorder="0" allowFullScreen></iframe>
@@ -142,7 +142,7 @@ class ProfileShow extends React.Component {
           {currentStateofPlaylist}
         </div>
 
-        <div id="container">
+        <div>
 
 
             {iframes}

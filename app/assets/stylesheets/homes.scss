@@ -136,11 +136,15 @@ body {
         background-attachment:fixed;
 
 
-        color: white;
+        color: #FECEA8;
         background-position: center-top;
 
         a {
-          color: white;
+          color: #D6E1C7;
+        }
+
+        a:hover {
+          color: green;
         }
 
 
@@ -180,6 +184,14 @@ body {
    color: white;
  }
 
+ a:hover {
+   color: #00AAFF;
+ }
+
+ button:hover {
+   color: #00AAFF;
+ }
+
 }
 label {
   color: white;
@@ -199,6 +211,20 @@ label {
   border: 3px;
   padding: 10px;
 
+
+}
+.favoritesContainer {
+  color: black;
+  opacity: 0.7;
+
+
+
+  margin-left: 700px;
+  width: 50%;
+  border: 3px;
+  padding: 10px;
+
+  right: 20%;
 
 }
 
@@ -223,8 +249,10 @@ label {
 }
 
 .favoriteCenter {
-  text-align: center;
+
+
   line-height: 90px;
+
 }
 
 .addSongButton:hover{
@@ -232,26 +260,27 @@ label {
 
   position: auto;
     left: 100px;
-    border: 3px solid #8AC007;
+    color: green;
 
 
 }
 .addSongButton {
-  color: #D4EE5E;
+  color: #D6E1C7;
 
 
 }
 
 .removeSongButton {
 margin-right: 300px;
-color: #FF4242;
+color: #EBC288;
 
 }
 .removeSongButton:hover{
 
   position: auto;
     left: 100px;
-    border: 3px solid red;
+    color: red;
+
 
 
 }
@@ -317,8 +346,8 @@ color: #FF4242;
 
 
 position: fixed;
-top: 15%;
-left: 3%;
+top: 10%;
+left: 20%;
 
 
 
