@@ -110,7 +110,7 @@ class ProfileShow extends React.Component {
 
 
         return(
-          <div className="row column">
+          <div>
             <h8>{song.name}</h8>
              <iframe id="player" width="640" height="360"
         src={`https://www.youtube.com/embed/${song.youtubeId}`}
@@ -137,7 +137,7 @@ class ProfileShow extends React.Component {
       <div className="favoritesCenter">
         <div className= "leftSide">
           <a onClick={handleSubmit} href={"individuals"}> Click to save playlist</a> <br/>
-          <h4>Current Songs in Playlist</h4>
+          <h5>Current Songs in Playlist</h5>
 
           {currentStateofPlaylist}
         </div>

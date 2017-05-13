@@ -5,6 +5,7 @@ class YoutubeShow extends React.Component {
   constructor(props){
     super(props)
     this.state = {
+      song: false
 
 
     }
@@ -40,8 +41,18 @@ class YoutubeShow extends React.Component {
     if (songs_with_ids.length > 0) {
       iframes = songs_with_ids.map(song => {
         let songHandler = () => {
+          if (this.state.song === true) {
+            return (
+              <h2> You've already liked this song</h2>
+            )
+
+          } else {
+
+
+          this.setState({ song: true  })
 
           this.createSong(song.title, song.id)
+        }
 
         }
         return(

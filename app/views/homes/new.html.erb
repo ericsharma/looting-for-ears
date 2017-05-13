@@ -1,0 +1,24 @@
+<h3>You need to be an admin before you can submit playlists</h3>
+
+
+<div class="adminForm">
+
+
+
+  <%= form_for @home do |f| %>
+    <div class="field">
+      <%= f.label :name %>
+      <%= f.text_field :name %>
+    </div>
+
+    <div class="field">
+      <%= f.label :body, "Why do you think you should be an admin?" %>
+      <%= f.text_area :body %>
+    </div>
+
+    <div class="actions">
+      <%= f.submit "Submit", class: "button" %>
+    </div>
+  <% end %>
+
+</div>
