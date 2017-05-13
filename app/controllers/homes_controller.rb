@@ -9,6 +9,7 @@ class HomesController < ApplicationController
   end
 
   def create
+
     if current_user == nil
       flash[:message] = "You need to be signed in to request Admin access."
       redirect_to new_user_session_path
@@ -18,7 +19,9 @@ class HomesController < ApplicationController
 
       if @home.save
 
-        AdminMailer.new_admin(@home).deliver_later
+        binding.pry
+        AdminMailer.new_admin(@home)
+
         flash[:message] = "You're request to become an Admin has succesfully been sent!"
         redirect_to root_path
       else

@@ -1,10 +1,11 @@
 class AdminMailer < ApplicationMailer
-  def new_admin(admin)
-    @home = admin
+  def new_admin(home)
 
+    @home = home
+    
     mail(
-      to: "ericsharma420@gmail.com",
-      subject: "#{admin.name} has requested admin access"
+      to: "lootingforears@gmail.com",
+      subject: "#{home.name} has requested admin access"
     )
   end
 end
