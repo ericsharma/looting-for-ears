@@ -19,7 +19,7 @@ class HomesController < ApplicationController
 
       if @home.save
 
-        binding.pry
+      
         AdminMailer.new_admin(@home)
 
         flash[:message] = "You're request to become an Admin has succesfully been sent!"
