@@ -5,7 +5,7 @@ class YoutubeShow extends React.Component {
   constructor(props){
     super(props)
     this.state = {
-      song: false
+      messages: []
 
 
     }
@@ -26,10 +26,25 @@ class YoutubeShow extends React.Component {
     .then(response => {
       let parsed = response.json()
       return parsed
+    }).then(message => {
+      this.setState({ messages: message.message })
     })
   }
 
+
   render() {
+
+    let currentMessage;
+    if (this.state.messages.length > 0) {
+      debugger;
+
+      currentMessage = this.state.messages.map (message => {
+
+        return (
+          <h4>{message}</h4>
+        )
+      })
+    }
 
 
     let songs_with_ids = []
@@ -44,7 +59,7 @@ class YoutubeShow extends React.Component {
 
 
 
-          
+
 
           this.createSong(song.title, song.id)
 
@@ -71,6 +86,7 @@ class YoutubeShow extends React.Component {
 
     return(
       <div id="container">
+        {currentMessage}
       <div>
 
 

@@ -13,7 +13,8 @@ class Api::V1::SongsController < ApplicationController
 
 
     if song.save
-      flash[:success] = "View profile to see your newly saved song!"
+      render json: {message: "Song has been saved!"}
+
     else
        flash[:errors] = song.errors.full_messages.join(',')
 
