@@ -13,10 +13,10 @@ class Api::V1::SongsController < ApplicationController
 
 
     if song.save
-      render json: {message: ["Song has been saved!"]}
+      render json: {message: "Song has been saved!"}
 
     else
-       render json: {message: ["You have already liked this song"]}
+       flash[:errors] = song.errors.full_messages.join(',')
 
     end
 
