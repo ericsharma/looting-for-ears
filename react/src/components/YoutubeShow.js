@@ -85,8 +85,13 @@ class YoutubeShow extends React.Component {
 
 
     return(
-      <div id="container">
+      <div >
+        <div className="leftSide">
         {currentMessage}
+      </div>
+      <div id="container">
+
+
       <div>
 
 
@@ -102,7 +107,7 @@ class YoutubeShow extends React.Component {
       </div>
       {iframes}
       </div>
-
+      </div>
 
 
 

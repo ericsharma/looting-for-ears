@@ -13,7 +13,7 @@ class Api::V1::SongsController < ApplicationController
 
 
     if song.save
-      render json: {message: ["Song has been saved!"]}
+      render json: {message: ["#{song.name} has been saved!"]}
 
     else
        render json: {message: ["You have already liked this song"]}
