@@ -1,3 +1,30 @@
 .top-bar-text{
   padding: 0;
 }
+.favorites {
+
+
+         background-image: image-url('bg.png');
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        background-size: cover;
+        background-size: 100%;
+        background-repeat: no-repeat;
+        background-attachment:fixed;
+
+
+        color: #FECEA8;
+        background-position: center-top;
+
+        a {
+          color: #D6E1C7;
+        }
+
+        a:hover {
+          color: green;
+        }
+
+
+
+
+}
